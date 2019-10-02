@@ -1,0 +1,17 @@
+<div class="container playContainer">
+  <app-symbol [symbol]="symbol"></app-symbol>
+  <button
+    *ngIf="human && !reset"
+    (click)="play()"
+    class="btn btn-outline-primary my-3"
+  >
+    Go!
+  </button>
+  <button
+    *ngIf="human && reset"
+    (click)="resetGame()"
+    class="btn btn-outline-info my-3"
+  >
+    Reset
+  </button>
+</div>

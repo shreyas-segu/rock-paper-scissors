@@ -1,0 +1,20 @@
+.playContainer {
+  max-height: 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+button {
+  width: 250px;
+}
+
+@media (max-width: 350px) {
+  .playContainer {
+    max-height: 200px;
+    max-width: 200px;
+    text-align: center;
+  }
+  button {
+    width: 150px;
+  }
+}
