@@ -5,46 +5,44 @@
   <div *ngIf="botScore >= 3" class="alert alert-danger" role="alert">
     You lost 🙁
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6 col-md-6">
-        <p class="h4 text-center p-3">
-          Bot's score
-          <span
-            class="badge badge-pill"
-            [ngClass]="{
-              'badge-success': botScore >= 3,
-              'badge-dark': botScore < 3
-            }"
-            >{{ botScore }}</span
-          >
-        </p>
-        <app-player-layout
-          [human]="false"
-          [reset]="resetFlag"
-          [symbol]="botSymbol"
-        ></app-player-layout>
-      </div>
-      <div class="col-sm-6 col-md-6">
-        <p class="h4 text-center p-3">
-          Your score
-          <span
-            class="badge badge-pill"
-            [ngClass]="{
-              'badge-success': humanScore >= 3,
-              'badge-dark': humanScore < 3
-            }"
-            >{{ humanScore }}</span
-          >
-        </p>
-        <app-player-layout
-          [human]="true"
-          [reset]="resetFlag"
-          [symbol]="playerSymbol"
-          (clickEvent)="play()"
-          (emitReset)="reset()"
-        ></app-player-layout>
-      </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+      <p class="h5 text-center pb-0 pt-1">
+        Bot's score
+        <span
+          class="badge badge-pill"
+          [ngClass]="{
+            'badge-success': botScore >= 3,
+            'badge-dark': botScore < 3
+          }"
+          >{{ botScore }}</span
+        >
+      </p>
+      <app-player-layout
+        [human]="false"
+        [reset]="resetFlag"
+        [symbol]="botSymbol"
+      ></app-player-layout>
+    </div>
+    <div class="col-sm-6 col-md-6">
+      <p class="h5 text-center pb-0 pt-1">
+        Your score
+        <span
+          class="badge badge-pill"
+          [ngClass]="{
+            'badge-success': humanScore >= 3,
+            'badge-dark': humanScore < 3
+          }"
+          >{{ humanScore }}</span
+        >
+      </p>
+      <app-player-layout
+        [human]="true"
+        [reset]="resetFlag"
+        [symbol]="playerSymbol"
+        (clickEvent)="play()"
+        (emitReset)="reset()"
+      ></app-player-layout>
     </div>
   </div>
 </div>

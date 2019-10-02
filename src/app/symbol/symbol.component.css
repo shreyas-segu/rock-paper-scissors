@@ -3,3 +3,10 @@ svg {
   margin: 50px;
   text-align: center;
 }
+@media (max-width: 374px) {
+  svg {
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+  }
+}

@@ -8,13 +8,13 @@ button {
   width: 250px;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 374px) {
   .playContainer {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 180px;
+    max-width: 180px;
     text-align: center;
   }
   button {
-    width: 150px;
+    width: 100px;
   }
 }
